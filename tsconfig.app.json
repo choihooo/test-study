@@ -15,11 +15,23 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@src/components/*": ["src/components/*"],
+      "@src/pages/*": ["src/pages/*"],
+      "@src/layouts/*": ["src/layouts/*"],
+      "@src/utils/*": ["src/utils/*"],
+      "@src/hooks/*": ["src/hooks/*"],
+      "@src/types/*": ["src/types/*"],
+      "@src/styles/*": ["src/styles/*"],
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
