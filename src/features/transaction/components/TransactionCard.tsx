@@ -1,11 +1,12 @@
 import type { Transaction } from '../types/transaction.types';
 import { useNavigate } from 'react-router-dom';
+import { memo } from 'react';
 
 interface Props {
   transaction: Transaction;
 }
 
-export default function TransactionCard({ transaction }: Props) {
+function TransactionCard({ transaction }: Props) {
   const navigate = useNavigate();
 
   return (
@@ -19,3 +20,5 @@ export default function TransactionCard({ transaction }: Props) {
     </div>
   );
 }
+
+export default memo(TransactionCard);

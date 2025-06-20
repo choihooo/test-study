@@ -1,11 +1,12 @@
 import type { TransactionDetail } from "../types/transaction.types";
+import { memo } from 'react';
 
 interface Props {
   detail: TransactionDetail;
   onRepeat: () => void;
 }
 
-export default function TransactionDetailView({ detail, onRepeat }: Props) {
+function TransactionDetailView({ detail, onRepeat }: Props) {
   return (
     <div className="max-w-md mx-auto bg-white rounded-lg shadow p-6 mt-8 border border-gray-100">
       <h2 className="text-2xl font-bold text-gray-800 mb-2">{detail.recipient}</h2>
@@ -22,3 +23,5 @@ export default function TransactionDetailView({ detail, onRepeat }: Props) {
     </div>
   );
 }
+
+export default memo(TransactionDetailView);
